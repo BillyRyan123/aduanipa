@@ -1,0 +1,45 @@
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.navbar-logo{
+    font-size: 2.4rem;
+}
+
+.nav-center{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.nav-center li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.3rem 0.5rem; 
+    
+}
+
+.nav-center li a:hover {
+  color: #ffd000;       
+}
+
+.nav-right{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.nav-icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
