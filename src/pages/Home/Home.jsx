@@ -9,13 +9,13 @@ const Home = () => {
   return (
     <main className='home'>
         <Navbar/>
-       <div className="hero-line-text">
-        <hr className="sideline" />
-        <p className="hero-paragraph">More than 1000 recipes</p>
-       </div>
+        <div className="hero-line">
+          <hr />
+         <p>More than 1000 recipes</p>
+        </div>
 
        <div className='hero-image-wrapper'> 
-         <h2 className='hero-text'>Best Recipes for <br />your African Meals</h2>
+         <h2 className='hero-text'>Best Recipes for <br/>your African Meals</h2>
 
         <div className='image-group'>
         <div className="hero-shape"></div>
@@ -27,17 +27,17 @@ const Home = () => {
 
        </div>
 
-       
-
+       <div className="search-wrapper">
+        
         <input type="text" 
         className='search-input'
         onChange={(e)=>setRecipeSearch(e.target.value)}
         placeholder='search by dish, ingredient, title'
         value={searchRecipe}
         />
-        <Button>Search</Button>
+        <Button className>Search</Button>
+       </div>
     </main>
   )
 }
-
 export default Home
