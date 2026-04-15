@@ -1,24 +1,39 @@
 .navbar{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    flex-wrap: wrap;
 }
 
 .navbar-logo{
-    font-size: 2.4rem;
+    font-size: 1.8rem;
 }
 
+
+
 .nav-center{
-    display: flex;
-    flex-wrap: wrap;
+    display: none;
+    /*flex-wrap: wrap;
     gap: 1.5rem;
     list-style: none;
     font-size: 1.6rem;
-    cursor: pointer;
+    cursor: pointer;*/
 }
+
+.nav-center.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    background-color:#f5f5f5;
+    list-style: none;
+    padding: 1.5rem;
+    z-index: 100;
+    left: 0;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
 
 .nav-center li a {
     text-decoration: none;
@@ -34,13 +49,43 @@
 
 .nav-right{
     display: flex;
-    flex-wrap: wrap;
     gap: 8px;
     align-items: center;
 }
 
 .nav-icon {
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 110; 
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icon.active-icon {
+    color: #ffd000; 
+}
+
+
+@media(min-width: 768px){
+  .nav-center{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    width: auto;
+  }
+
+  .menu-toggle{
+    display: none;
+  }
 }
